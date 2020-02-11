@@ -1,15 +1,14 @@
 import vars
 import extractor
-import parse
+from parse import Parse
 import service
 
 # Realiza um pré tratamento dos dados
-parse.string_to_number(vars.sectors_tsv_path, vars.sectors_outfile_tsv_path)
-# parse.doOutraCoisa
-
+p = Parse()
+p.string_to_number(vars.sectors_tsv_path, vars.temp_tsv_path)
+p.delete_invalid_lines(vars.contacts_tsv_path, vars.temp_tsv_path)
+p.delete_invalid_lines(vars.companies_tsv_path, vars.temp_tsv_path)
 # Extrai scripts SQL dos arquivos .tsv
 extractor.extractSQLfromTsv()
-# Conecta com servidor MySQL e Transforma os dados
+# Conecta com servidor MySQL, Transforma os dados e Salva os outputs em /res/tsv/
 service.transform()
-# Salva os outputs em /res/tsv/
-service.load()
