@@ -9,7 +9,8 @@ class Parse:
         self.invalid = 0
 
     # removendo aspas de um arquivo (para facilitar a conversão do sectorKey)
-    def string_to_number(self, infilePath, outfilePath):
+    def string_to_number(self, infilePath):
+        outfilePath = vars.temp_tsv_path
         with open(infilePath, 'r', encoding='utf-8') as infile, open(outfilePath, 'w', encoding='utf-8') as outfile:
             for line in infile:
                 outfile.write(line.replace('"', '').replace("'", ""))
@@ -19,7 +20,8 @@ class Parse:
         os.remove(infilePath)
         os.rename(outfilePath, infilePath)
 
-    def delete_invalid_lines(self, outfilePath):
+    def delete_invalid_lines(self):
+        outfilePath = vars.temp_tsv_path
         for infilePath in os.listdir(vars.tsv_path):
             print('INFILE PATHN: ', infilePath)
             with open(vars.tsv_path + infilePath, 'r', encoding='utf-8') as infile, open(outfilePath, 'w', encoding='utf-8') as outfile:
