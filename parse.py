@@ -36,6 +36,6 @@ class Parse:
             infile.close()
             outfile.close()
             # substitui o arquivo antigo pelo novo arquivo e renomeia
-            os.remove(infilePath)
-            os.rename(outfilePath, infilePath)
+            os.remove(vars.tsv_path + infilePath)
+            os.rename(outfilePath, vars.tsv_path + infilePath)
     
