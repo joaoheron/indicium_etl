@@ -28,7 +28,7 @@ def extractSQLfromTsv():
     # Navega para um site(beautifyconverter) encontrado na internet que faz a conversão de tabelas .tsv para SQL
     driver.get(vars.converter_url)
     # copia conteúdo do .tsv para o clipboard
-    fo = open(vars.tsv_path + filename, 'r', encoding = vars.utf8).read()
+    fo = open(vars.tsv_path + filename, 'r', encoding = 'utf-8').read()
     pyperclip.copy(fo)
     time.sleep(0.2)
     # Cola o conteúdo do clipboard para o site beautifyconverter
@@ -50,7 +50,7 @@ def extractSQLfromTsv():
     time.sleep(0.5)
     # Cola o conteúdo do script .sql gerado pelo site e salva em um arquivo na pasta /res/sql
     pasted = pyperclip.paste()
-    with open(vars.sql_path + filename[:-4] + '.sql', 'w', encoding = vars.utf8) as g:
+    with open(vars.sql_path + filename[:-4] + '.sql', 'w', encoding = 'utf-8') as g:
       g.write(pasted)
       g.close()
   print(ARQUIVOS_EXTRAIDOS) 

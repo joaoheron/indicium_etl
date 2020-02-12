@@ -10,7 +10,7 @@ class Parse:
 
     # removendo aspas de um arquivo (para facilitar a conversão do sectorKey)
     def string_to_number(self, infilePath, outfilePath):
-        with open(infilePath, 'r', encoding=vars.utf8) as infile, open(outfilePath, 'w', encoding=vars.utf8) as outfile:
+        with open(infilePath, 'r', encoding='utf-8') as infile, open(outfilePath, 'w', encoding='utf-8') as outfile:
             for line in infile:
                 outfile.write(line.replace('"', '').replace("'", ""))
         infile.close()
