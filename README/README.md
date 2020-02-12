@@ -1,4 +1,4 @@
-*** Execução da aplicação ***
+# *** Execução da aplicação ***
 - Para executar a aplicação, basta abrir a pasta principal do projeto e executar o comando 'python .\main.py'
 
 - É necessário que a máquina onde o projeto será executado possua um servidor MySQL instalado. As credenciais do banco devem ser atualizadas através do arquivo db_credentials.py para que a conexão seja realizada com sucesso.
@@ -7,7 +7,7 @@
 /res/ é referente à versão do ChromeDriver para Windows. Caso o projeto seja executado em ambiente Unix, é necessário mudar o executável para um correspondente à plataforma. Caso o nome do executável seja diferente de 'chromedriver.exe', o path para o mesmo deve ser atualizado em vars.py.
 
 
-*** Considerações sobre o desenvolvimento do projeto ***
+# *** Considerações sobre o desenvolvimento do projeto ***
 
 1. No início da concepção do projeto, foi feita uma observação sobre os arquivos de input .tsv fornecidos. Algumas decisões foram tomadas com base nessa observação. 
 - 1.1. Foram retiradas as aspas presentes no sectors.tsv, pois foi notado que este era unico id que NÃO estava sendo representado como valor numérico, e isso dificultaria as queries no futuro.
