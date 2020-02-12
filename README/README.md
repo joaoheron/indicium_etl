@@ -1,10 +1,9 @@
 # *** Execução da aplicação ***
-- Para executar a aplicação, basta abrir a pasta principal do projeto e executar o comando 'python .\main.py'
+- Para executar a aplicação, basta abrir o terminal, navegar até a pasta principal do projeto e executar o comando 'python .\main.py'
 
-- É necessário que a máquina onde o projeto será executado possua um servidor MySQL instalado. As credenciais do banco devem ser atualizadas através do arquivo db_credentials.py para que a conexão seja realizada com sucesso.
+- É necessário que a máquina onde o projeto será executado possua a linguagem python e um servidor MySQL instalados. As credenciais do banco devem ser atualizadas através do arquivo db_credentials.py, conforme as configurações da máquina, para que a conexão seja realizada com sucesso.
 
-- O projeto utiliza Selenium na classe extrator.py. Como o projeto foi desenvolvido no sistema operacional Windows, o webdriver armazenado na pasta 
-/res/ é referente à versão do ChromeDriver para Windows. Caso o projeto seja executado em ambiente Unix, é necessário mudar o executável para um correspondente à plataforma. Caso o nome do executável seja diferente de 'chromedriver.exe', o path para o mesmo deve ser atualizado em vars.py.
+- O projeto utiliza Selenium na classe extrator.py. Como o projeto foi desenvolvido no sistema operacional Windows, o webdriver armazenado na pasta /res/ é referente à versão do ChromeDriver para Windows. Caso o projeto seja executado em ambiente Unix, é necessário mudar o executável para um correspondente à plataforma. Caso o nome do executável seja diferente de 'chromedriver.exe', o path para o mesmo deve ser atualizado na classe vars.py.
 
 
 # *** Considerações sobre o desenvolvimento do projeto ***
