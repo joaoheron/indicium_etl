@@ -1,7 +1,7 @@
-import vars
-import extractor
-from parse import Parse
-import service
+import src.vars as vars
+import src.extractor as extractor
+from src.parse import Parse
+import src.service as service
 
 # Realiza um pré tratamento dos dados
 p = Parse()
