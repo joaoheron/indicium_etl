@@ -30,4 +30,3 @@
 ## 1 - Os resultados da execução já estão armazenados na pasta /res/outputs/, a execução apenas substuirá os arquivos.
 ## 2 - O banco indic não foi apagado do MySQL ao final da execução, tampouco as tabelas presentes nele, para melhor avaliação da empresa perante os dados apresentados.
 ## 3 - As linhas descartadas informadas são referentes apenas às linhas com encoding alternativo, como requisitado no desafio. Existiram outros registros descartadas, como um que possuía uma FK inválida por exemplo. Decisões e explicações sobre as operações no banco podem ser encontradas na classe service.py. 
-## 4 - Deve ser evitado mexer no cursor durante a execução do extrator em Selenium, pois o webdriver é muito instável.
